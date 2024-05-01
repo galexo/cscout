@@ -439,7 +439,7 @@ create_project
 # Spy on ar invocations and construct corresponding CScout directives
 #
 
-$real = which($0);
+$real = "/home/developer/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/xtensa-esp32-elf-ar";
 
 $origline = "ar " . join(' ', @ARGV);
 $origline =~ s/\n/ /g;
@@ -493,7 +493,7 @@ exit system(($real, @ARGV)) / 256;
 # Therefore it is easier to let gcc do the work
 #
 
-$real = which($0);
+$real = "/home/developer/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/xtensa-esp32-elf-gcc";
 
 # Gather input / output files and remove them from the command line
 for ($i = 0; $i <= $#ARGV; $i++) {
@@ -679,7 +679,7 @@ sub abs_if_exists
 # Spy on ld invocations and construct corresponding CScout directives
 #
 
-$real = which($0);
+$real = "/home/developer/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/xtensa-esp32-elf-ld";
 
 # Gather input / output files and remove them from the command line
 for ($i = 0; $i <= $#ARGV; $i++) {
